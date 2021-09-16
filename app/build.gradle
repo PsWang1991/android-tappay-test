@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.app.xarehub"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner 'com.app.xarehub.ExampleInstrumentedTest'
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    // Core
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Multidex
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Testing dependencies
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test:core-ktx:1.4.0"
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.3"
+    androidTestImplementation "androidx.test:rules:1.4.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.3.1')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Views
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // Material design
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // Hilt dependencies
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    // Hilt testing dependency
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    // Make Hilt generate code in the androidTest folder
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Moshi
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Moshi Converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    // OkHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:3.12.12"
+
+    // Datastore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    // Coil - https://github.com/coil-kt/coil
+    implementation "io.coil-kt:coil:1.2.2"
+
+    // Image picker - https://github.com/esafirm/android-image-picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.4.5'
+
+    // Permission - https://github.com/googlesamples/easypermissions
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    // Progress Indicator (It's better to be replaced by native one.)
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    // Location - Google Play Services
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+}

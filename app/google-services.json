@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "471508503466",
+    "project_id": "xarehub-2021",
+    "storage_bucket": "xarehub-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471508503466:android:fdf3c46543fb6db834b9d3",
+        "android_client_info": {
+          "package_name": "com.app.xarehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471508503466-f1da01o8g8mb81db0gcf5uqt50i6jdp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChlbe12m5RAvmdbHQWyQBO7NGX-GLCwoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471508503466-f1da01o8g8mb81db0gcf5uqt50i6jdp9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "471508503466-rn65beec50r84h88j4pf9g23ruc8ah4h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appworkout.xarehub.beta"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
